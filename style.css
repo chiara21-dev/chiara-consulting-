@@ -208,6 +208,22 @@ header {
   font-weight: 500;
 }
 
+.speaking-item {
+  margin-bottom: 1.75rem;
+}
+
+.speaking-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.speaking-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 36rem;
+}
+
 /* -----------------------
    About
 ----------------------- */
