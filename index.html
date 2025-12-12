@@ -1,4 +1,11 @@
-:root{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C. — Chiara Consulting</title>
+  <meta name="description" content="Turning strategy into action — without unnecessary complexity." />
+  <link rel="stylesheet" href=":root{
   --bg: #fbf7f2;          /* warm beige */
   --panel: #ffffff;       /* cards */
   --text: #1f1a17;        /* near-black, warm */
@@ -238,3 +245,252 @@ p{ margin: 0 0 14px; color: var(--muted); }
   flex-wrap: wrap;
 }
 .footer p{ margin: 0; }
+" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">
+        <span class="logo">C.</span>
+        <span class="brand-name">Chiara Consulting</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#how">How I help</a>
+        <a href="#services">Work</a>
+        <a href="#about">About</a>
+        <a class="btn btn-small" href="#talk">Let’s talk</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">
+        Menu
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container grid-2">
+        <div>
+          <p class="kicker">Strategy • Execution • Organizational Change</p>
+          <h1>Turning strategy into action — without unnecessary complexity</h1>
+          <p class="lead">
+            I help leadership teams and organizations clarify priorities, align people,
+            and execute change that actually delivers results.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="#talk">→ Let’s talk</a>
+            <a class="btn btn-ghost" href="#services">See what I work on</a>
+          </div>
+          <p class="micro">No sales pitch. Just a focused conversation.</p>
+        </div>
+
+        <div class="card hero-card">
+          <h3>Typical outcomes</h3>
+          <ul class="checklist">
+            <li>Fewer priorities, clearer decisions</li>
+            <li>Alignment across leaders and teams</li>
+            <li>Plans that translate into daily action</li>
+            <li>Change that actually lands</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why execution is harder than it should be</h2>
+          <p class="muted">
+            Most organizations don’t lack ideas or ambition. They struggle with:
+          </p>
+        </div>
+
+        <div class="cards-3">
+          <div class="card">
+            <h3>Too many priorities</h3>
+            <p>Unclear decisions and competing initiatives slow everything down.</p>
+          </div>
+          <div class="card">
+            <h3>Strategy that stays abstract</h3>
+            <p>Big intent, but no translation into concrete daily action.</p>
+          </div>
+          <div class="card">
+            <h3>Misalignment during change</h3>
+            <p>Teams get overwhelmed, and progress becomes fragile.</p>
+          </div>
+        </div>
+
+        <p class="callout">
+          The result? Slow progress, frustrated people, and initiatives that never fully land.
+        </p>
+      </div>
+    </section>
+
+    <!-- HOW I HELP -->
+    <section class="section alt" id="how">
+      <div class="container grid-2">
+        <div>
+          <h2>How I help</h2>
+          <p class="lead">
+            I work with leaders and teams to bridge the gap between strategy and execution.
+            My role is to bring clarity, simplify complexity, and help organizations move forward —
+            pragmatically and collaboratively.
+          </p>
+          <p>
+            I don’t add frameworks for the sake of it. I help you focus on what truly matters and make it actionable.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>What you can expect</h3>
+          <ul class="bullets">
+            <li><strong>Clarity</strong> on priorities, trade-offs, and decisions</li>
+            <li><strong>Momentum</strong> through practical plans and follow-through</li>
+            <li><strong>Alignment</strong> across people, roles, and ways of working</li>
+            <li><strong>Trust</strong> via honest, calm, and useful collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>What I work on</h2>
+          <p class="muted">Engagements are tailored — from focused advisory to hands-on support.</p>
+        </div>
+
+        <div class="cards-3">
+          <div class="card">
+            <h3>Strategy to execution</h3>
+            <p>Turning strategic intent into clear priorities, decisions, and action plans.</p>
+          </div>
+          <div class="card">
+            <h3>Organizational change & alignment</h3>
+            <p>Supporting leaders and teams through change, ensuring alignment across people, structure, and ways of working.</p>
+          </div>
+          <div class="card">
+            <h3>Leadership & team effectiveness</h3>
+            <p>Helping managers and teams work better together, make decisions faster, and deliver with confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="section alt" id="approach">
+      <div class="container">
+        <div class="section-head">
+          <h2>My approach</h2>
+          <p class="muted">Pragmatic, human-centered, clear, and collaborative.</p>
+        </div>
+
+        <div class="cards-4">
+          <div class="card">
+            <h3>Pragmatic</h3>
+            <p>Grounded in real organizational constraints.</p>
+          </div>
+          <div class="card">
+            <h3>Human-centered</h3>
+            <p>Change only works if people are on board.</p>
+          </div>
+          <div class="card">
+            <h3>Clear and honest</h3>
+            <p>No buzzwords. No unnecessary complexity.</p>
+          </div>
+          <div class="card">
+            <h3>Collaborative</h3>
+            <p>Working with you — not advising from the outside.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO -->
+    <section class="section" id="clients">
+      <div class="container grid-2">
+        <div>
+          <h2>Who I typically work with</h2>
+          <ul class="bullets">
+            <li>Leadership teams in mid-sized organizations and scale-ups</li>
+            <li>Organizations navigating growth, transformation, or complexity</li>
+            <li>Leaders who want clarity, alignment, and tangible progress</li>
+          </ul>
+
+          <p class="callout">
+            If you’re looking for polished decks only, I’m probably not the right fit.<br />
+            <strong>If you want things to move, we should talk.</strong>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Formats</h3>
+          <ul class="bullets">
+            <li>Focused advisory & decision support</li>
+            <li>Workshops & facilitation</li>
+            <li>Hands-on execution support</li>
+            <li>Change & alignment programs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section alt" id="about">
+      <div class="container grid-2">
+        <div>
+          <h2>About</h2>
+          <p class="lead">
+            I’m Chiara Chianese, a consultant working at the intersection of strategy, people, and execution.
+          </p>
+          <p>
+            I’ve worked with organizations facing change, growth, and complexity, helping leaders turn intentions into action
+            and create ways of working that actually deliver.
+          </p>
+          <p>
+            I believe clarity is a competitive advantage — and that good consulting should make things simpler, not harder.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Quick intro call</h3>
+          <p class="muted">A focused conversation to understand your context and see if I can help.</p>
+          <div class="spacer"></div>
+          <a class="btn" href="#talk">→ Start a conversation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" id="talk">
+      <div class="container cta">
+        <h2>Let’s talk</h2>
+        <p class="lead">
+          If you’re facing strategic complexity, organizational change, or execution challenges,
+          I’d be happy to explore whether I can help.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="mailto:cchianese21@gmail.com?subject=Consulting%20inquiry">→ Start a conversation</a>
+          <a class="btn btn-ghost" href="#services">View services</a>
+        </div>
+        <p class="micro">No sales pitch. Just a focused conversation.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Chiara Consulting</p>
+      <p class="muted">Strategy to execution • Organizational change • Team effectiveness</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
