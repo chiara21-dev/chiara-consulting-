@@ -195,8 +195,7 @@ header {
 }
 
 .speaking-media {
-  align-self: center;
-  margin-top: -1rem;
+  justify-self: end;
 }
 
 .speaking-list p {
