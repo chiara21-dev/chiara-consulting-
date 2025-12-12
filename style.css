@@ -156,6 +156,11 @@ header {
   margin-bottom: 1rem;
 }
 
+.speaking-list {
+  margin-top: 2rem; /* ← adds space before “AI without the hype” */
+}
+
+
 .speaking-list span {
   color: var(--accent);
   font-weight: 500;
