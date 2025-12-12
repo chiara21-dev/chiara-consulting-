@@ -189,9 +189,9 @@ header {
 
 .speaking-layout {
   display: grid;
-  grid-template-columns: 1fr auto; /* topics left, image right */
-  gap: 3.5rem;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 3rem;
+  align-items: start;
 }
 
 .speaking-media {
