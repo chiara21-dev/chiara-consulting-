@@ -4,20 +4,20 @@
 
 :root {
   --bg-main: #faf8f6;       /* warm off-white */
-  --bg-section: #ffffff;   /* pure white */
-  --text-main: #2b2b2b;    /* soft charcoal */
-  --text-muted: #6f6a64;   /* warm gray */
-  --accent: #c08a7a;       /* muted rose */
-  --border-light: rgba(0, 0, 0, 0.06);
+  --bg-section: #ffffff;    /* clean white */
+  --text-main: #2b2b2b;     /* soft charcoal */
+  --text-muted: #6f6a64;    /* warm gray */
+  --accent: #c08a7a;        /* muted rose */
+  --border-light: rgba(0, 0, 0, 0.07);
 }
 
 /* -----------------------
    Base
 ----------------------- */
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -26,6 +26,7 @@ body {
   background: var(--bg-main);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3 {
@@ -45,6 +46,8 @@ a {
   text-decoration: none;
 }
 
+a:hover { color: var(--text-main); }
+
 section {
   padding: 6rem 1.5rem;
 }
@@ -54,6 +57,13 @@ section {
   margin: 0 auto;
 }
 
+/* Spacing under section intro text (e.g., Speaking intro) */
+.section-intro {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  max-width: 42rem;
+}
+
 /* -----------------------
    Header
 ----------------------- */
@@ -61,7 +71,8 @@ section {
 header {
   position: sticky;
   top: 0;
-  background: var(--bg-main);
+  background: rgba(250, 248, 246, 0.92);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-light);
   z-index: 10;
 }
@@ -73,9 +84,14 @@ header {
   padding: 1.5rem;
 }
 
+.brand {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
 .nav a {
   margin-left: 2rem;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
 }
 
@@ -89,22 +105,24 @@ header {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr auto; /* text + image (fit-content) */
+  grid-template-columns: 1fr auto; /* key: image column fits content */
   gap: 3rem;
   align-items: center;
 }
 
 .hero-media {
-  justify-self: end; /* push image to the right */
+  justify-self: end;
 }
 
-.photo-frame {
-  display: inline-block; /* prevent stretching */
+.kicker {
+  font-size: 0.92rem;
+  letter-spacing: 0.2px;
 }
 
 .hero h1 {
   font-size: clamp(2.4rem, 5vw, 3.2rem);
   max-width: 720px;
+  margin-top: 0.8rem;
 }
 
 .hero p {
@@ -117,26 +135,28 @@ header {
   margin-top: 2.5rem;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .button-primary {
   background: var(--text-main);
   color: #fff;
-  padding: 0.7rem 1.6rem;
+  padding: 0.75rem 1.6rem;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .button-secondary {
   border: 1px solid var(--border-light);
-  padding: 0.7rem 1.6rem;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 0.75rem 1.6rem;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .button-primary:hover,
 .button-secondary:hover {
-  opacity: 0.85;
+  opacity: 0.88;
 }
 
 /* -----------------------
@@ -156,6 +176,7 @@ header {
 
 .pillar h3 {
   font-size: 1.3rem;
+  color: var(--text-main);
 }
 
 .pillar p {
@@ -166,15 +187,21 @@ header {
    Speaking
 ----------------------- */
 
+.speaking-layout {
+  display: grid;
+  grid-template-columns: 1fr auto; /* topics left, image right */
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.speaking-media {
+  justify-self: end;
+}
+
 .speaking-list p {
   font-size: 1.05rem;
   margin-bottom: 1rem;
 }
-
-.speaking-list {
-  margin-top: 2.5rem; /* ← adds space before “AI without the hype” */
-}
-
 
 .speaking-list span {
   color: var(--accent);
@@ -191,6 +218,8 @@ header {
 
 .about p {
   max-width: 720px;
+  margin-top: 1.5rem;
+  line-height: 1.8;
 }
 
 /* -----------------------
@@ -203,6 +232,38 @@ header {
 
 .contact a {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* -----------------------
+   Images
+----------------------- */
+
+.photo-frame {
+  display: inline-block; /* prevents stretching */
+  border: 1px solid var(--border-light);
+  padding: 0.4rem;
+  background: var(--bg-section);
+  border-radius: 18px;
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  object-fit: cover;
+}
+
+.speaking-photo {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
 }
 
 /* -----------------------
@@ -213,41 +274,35 @@ footer {
   border-top: 1px solid var(--border-light);
   text-align: center;
   padding: 2rem;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
+
 /* -----------------------
-   Images
+   Responsive
 ----------------------- */
 
-.photo-frame {
-  border: 1px solid var(--border-light);
-  padding: 0.4rem;
-  background: var(--bg-section);
-  border-radius: 18px;
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-media {
+    justify-self: start;
+  }
+
+  .speaking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .speaking-media {
+    justify-self: start;
+    margin-top: 2rem;
+  }
 }
 
-.hero-photo {
-  width: 100%;
-  max-width: 240px;   /* controls portrait size */
-  border-radius: 14px;
-  display: block;
-  object-fit: cover;
-}
-
-.speaking-photo {
-  width: 100%;
-  max-width: 340px;   /* controls speaking image size */
-  border-radius: 16px;
-  display: block;
-  object-fit: cover;
-}
 @media (max-width: 768px) {
-  .hero-photo {
-    max-width: 200px;
-  }
-
-  .speaking-photo {
-    max-width: 280px;
-  }
+  .hero-photo { max-width: 200px; }
+  .speaking-photo { max-width: 280px; }
 }
