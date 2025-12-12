@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chiara Chianese — Life Sciences & AI Strategy Advisor</title>
+
+  <title>Chiara Chianese, PhD, MBA — Life Sciences & AI Strategy Advisor</title>
+  <meta name="description" content="Chiara Chianese, PhD, MBA — Advisor at the intersection of life sciences, AI, and business strategy." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
@@ -18,8 +20,9 @@
 
 <header>
   <div class="nav container">
-    <div>Your Name</div>
-    <nav>
+    <div class="brand">Chiara Chianese, PhD, MBA</div>
+
+    <nav class="nav-links" aria-label="Primary">
       <a href="#pillars">Work</a>
       <a href="#speaking">Speaking</a>
       <a href="#about">About</a>
@@ -28,16 +31,17 @@
   </div>
 </header>
 
-<section class="hero container" style="display:grid; grid-template-columns: 1fr 300px; gap:4rem; align-items:center;">
-  <div>
-    <p>Life sciences · AI · strategy</p>
+<!-- HERO -->
+<section class="hero container" id="top">
+  <div class="hero-text">
+    <p class="kicker">Life sciences · AI · strategy</p>
 
     <h1>
       I help life-science organizations and investors make clear, confident decisions
       at the intersection of science, AI, and business.
     </h1>
 
-    <p>
+    <p class="lead">
       Advisory, diligence, and speaking — grounded in experience across academia,
       startups, and global pharma.
     </p>
@@ -48,55 +52,136 @@
     </div>
   </div>
 
-  <!-- Portrait image -->
-  <div class="photo-frame">
-    <img
-      src="images/portrait.jpg"
-      alt="Portrait of Your Name"
-      class="hero-photo"
-    />
+  <div class="hero-media">
+    <div class="photo-frame">
+      <img
+        src="images/portrait.jpg"
+        alt="Portrait of Chiara Chianese"
+        class="hero-photo"
+        loading="lazy"
+      />
+    </div>
   </div>
 </section>
 
-<section id="speaking" class="container">
-  <h2>Speaking</h2>
-  <div class="speaking-list">
-    <p><span>AI without the hype</span> in life sciences</p>
-    <p><span>From discovery to deal</span>: how science becomes value</p>
-    <p><span>The translator problem</span>: science × AI × business</p>
+<!-- PILLARS -->
+<section id="pillars" class="pillars">
+  <div class="container">
+    <h2>Ways to work together</h2>
+    <p class="section-intro">
+      One core focus, expressed through four complementary engagements.
+    </p>
 
-    <!-- Speaking image -->
-<img
-  src="images/speaking.jpeg"
-  alt="Your Name speaking at a conference"
-  class="speaking-photo"
-/>
- 
+    <div class="pillar-grid">
+      <div class="pillar">
+        <h3>AI & Data Strategy</h3>
+        <p>
+          Helping leadership teams decide where AI truly adds value, how to invest,
+          and how to align science, data, and business priorities.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <h3>Due Diligence & Transactions</h3>
+        <p>
+          Scientific, technical, and commercial diligence for investments,
+          licensing, and M&A — with clear risk framing.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <h3>Founder Advisory (Selective)</h3>
+        <p>
+          Strategic guidance for biotech and deep-tech founders at key inflection
+          points, with a limited number of advisory roles.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <h3>Speaking & Keynotes</h3>
+        <p>
+          Talks that translate complexity into executive-level insight,
+          without hype or oversimplification.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- SPEAKING -->
+<section id="speaking" class="speaking">
+  <div class="container">
+    <h2>Speaking</h2>
+    <p class="section-intro">
+      Keynote-ready topics, adaptable for conferences, leadership offsites,
+      and executive workshops.
+    </p>
+
+    <div class="speaking-layout">
+      <div class="speaking-list">
+        <p><span>AI without the hype</span> in life sciences</p>
+        <p><span>From discovery to deal</span>: how science becomes value</p>
+        <p><span>The translator problem</span>: science × AI × business</p>
+      </div>
+
+      <div class="speaking-media">
+        <div class="photo-frame">
+          <img
+            src="images/speaking.jpg"
+            alt="Chiara Chianese speaking at a conference"
+            class="speaking-photo"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section id="about" class="about">
   <div class="container">
     <h2>About</h2>
-    <p>
+
+    <p class="about-text">
       I hold a PhD in genomics and an MBA, and have worked across academia,
       startups, and global pharma. My experience includes scientific and
-      commercial due diligence, AI strategy, and mentoring founders.
+      commercial due diligence, AI strategy, and mentoring startup founders.
+      Having lived and worked across four countries and speaking five languages,
+      I specialize in bridging disciplines, cultures, and perspectives to support
+      better decision-making.
     </p>
   </div>
 </section>
 
-<section id="contact" class="contact container">
-  <h2>Contact</h2>
-  <p>
-    For consulting, advisory, or speaking inquiries:
-    <br />
-    <a href="mailto:your@email.com">your@email.com</a>
-  </p>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p class="section-intro">
+      For consulting, advisory, or speaking inquiries:
+    </p>
+
+    <p class="contact-line">
+      Email:
+      <a href="mailto:cchianese21@gmail.com">cchianese21@gmail.com</a>
+    </p>
+
+    <p class="contact-line">
+      LinkedIn:
+      <a
+        href="https://www.linkedin.com/in/chiara-chianese"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        linkedin.com/in/chiara-chianese
+      </a>
+    </p>
+  </div>
 </section>
 
 <footer>
-  © <span id="year"></span> Your Name
+  © <span id="year"></span> Chiara Chianese
 </footer>
 
 <script>
