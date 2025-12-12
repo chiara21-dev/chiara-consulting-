@@ -191,11 +191,12 @@ header {
   display: grid;
   grid-template-columns: 1fr auto; /* topics left, image right */
   gap: 3.5rem;
-  align-items: start;
+  align-items: center;
 }
 
 .speaking-media {
-  justify-self: end;
+  align-self: center;
+  margin-top: -1rem;
 }
 
 .speaking-list p {
