@@ -187,12 +187,26 @@ header {
    Speaking
 ----------------------- */
 
-.speaking-layout {
+.speaking-layout{
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr) 360px; /* text left, image right */
   gap: 3rem;
   align-items: start;
 }
+
+.speaking-media{
+  justify-self: end;
+}
+
+@media (max-width: 900px){
+  .speaking-layout{
+    grid-template-columns: 1fr; /* stack on mobile */
+  }
+  .speaking-media{
+    justify-self: start;
+    margin-top: 2rem;
+  }
+
 
 .speaking-media {
   justify-self: end;
