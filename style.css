@@ -1,19 +1,15 @@
-/* -----------------------
+/* =======================
    Design system
------------------------ */
+======================= */
 
 :root {
-  --bg-main: #faf8f6;       /* warm off-white */
-  --bg-section: #ffffff;    /* clean white */
-  --text-main: #2b2b2b;     /* soft charcoal */
-  --text-muted: #6f6a64;    /* warm gray */
+  --bg: #faf8f6;            /* warm off-white */
+  --surface: #ffffff;       /* white sections */
+  --text: #2b2b2b;          /* charcoal */
+  --muted: #6f6a64;         /* warm gray */
   --accent: #c08a7a;        /* muted rose */
-  --border-light: rgba(0, 0, 0, 0.07);
+  --border: rgba(0, 0, 0, 0.08);
 }
-
-/* -----------------------
-   Base
------------------------ */
 
 * { box-sizing: border-box; }
 
@@ -21,10 +17,10 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  color: var(--text-main);
-  background: var(--bg-main);
-  line-height: 1.65;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -38,7 +34,7 @@ h1, h2, h3 {
 
 p {
   margin: 0;
-  color: var(--text-muted);
+  color: var(--muted);
 }
 
 a {
@@ -46,10 +42,10 @@ a {
   text-decoration: none;
 }
 
-a:hover { color: var(--text-main); }
+a:hover { color: var(--text); }
 
 section {
-  padding: 6rem 1.5rem;
+  padding: 5.5rem 1.5rem;
 }
 
 .container {
@@ -57,208 +53,193 @@ section {
   margin: 0 auto;
 }
 
-/* Spacing under section intro text (e.g., Speaking intro) */
-.section-intro {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  max-width: 42rem;
-}
-
-/* -----------------------
+/* =======================
    Header
------------------------ */
+======================= */
 
 header {
   position: sticky;
   top: 0;
+  z-index: 10;
   background: rgba(250, 248, 246, 0.92);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-light);
-  z-index: 10;
+  border-bottom: 1px solid var(--border);
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
 }
 
 .brand {
   font-weight: 500;
   letter-spacing: 0.2px;
+  color: var(--text);
 }
 
-.nav a {
+.nav-links a {
   margin-left: 2rem;
   font-size: 0.92rem;
-  color: var(--text-muted);
+  color: var(--muted);
 }
 
-.nav a:hover {
-  color: var(--text-main);
-}
+.nav-links a:hover { color: var(--text); }
 
-/* -----------------------
+/* =======================
    Hero
------------------------ */
+======================= */
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr auto; /* key: image column fits content */
+  grid-template-columns: minmax(0, 1fr) auto; /* text | image */
   gap: 3rem;
   align-items: center;
-}
-
-.hero-media {
-  justify-self: end;
 }
 
 .kicker {
   font-size: 0.92rem;
   letter-spacing: 0.2px;
+  color: var(--muted);
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 5vw, 3.2rem);
-  max-width: 720px;
   margin-top: 0.8rem;
+  font-size: clamp(2.3rem, 5vw, 3.2rem);
+  max-width: 46rem;
+  color: var(--text);
 }
 
-.hero p {
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
-  max-width: 600px;
+.lead {
+  margin-top: 1.3rem;
+  font-size: 1.08rem;
+  max-width: 40rem;
 }
 
 .buttons {
-  margin-top: 2.5rem;
+  margin-top: 2.2rem;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
 .button-primary {
-  background: var(--text-main);
+  background: var(--text);
   color: #fff;
-  padding: 0.75rem 1.6rem;
+  padding: 0.78rem 1.6rem;
   border-radius: 999px;
   font-size: 0.95rem;
 }
 
 .button-secondary {
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.45);
-  padding: 0.75rem 1.6rem;
+  padding: 0.78rem 1.6rem;
   border-radius: 999px;
   font-size: 0.95rem;
 }
 
 .button-primary:hover,
-.button-secondary:hover {
-  opacity: 0.88;
+.button-secondary:hover { opacity: 0.9; }
+
+.hero-media {
+  justify-self: end;
 }
 
-/* -----------------------
+/* =======================
+   Sections text spacing
+======================= */
+
+.section-intro {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  max-width: 42rem;
+}
+
+/* =======================
    Pillars
------------------------ */
+======================= */
 
 .pillars {
-  background: var(--bg-section);
+  background: var(--surface);
 }
 
 .pillar-grid {
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 3rem;
-  margin-top: 4rem;
+  gap: 2.5rem;
 }
 
 .pillar h3 {
-  font-size: 1.3rem;
-  color: var(--text-main);
+  font-size: 1.25rem;
+  color: var(--text);
 }
 
-.pillar p {
-  margin-top: 0.8rem;
-}
+.pillar p { margin-top: 0.75rem; }
 
-/* -----------------------
+/* =======================
    Speaking
------------------------ */
+======================= */
 
-.speaking-layout{
+.speaking-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px; /* text left, image right */
+  grid-template-columns: minmax(0, 1fr) auto; /* text | image */
   gap: 3rem;
   align-items: start;
 }
 
-.speaking-media{
-  justify-self: end;
+.speaking-list {
+  max-width: 44rem; /* keeps text block from stretching too wide */
 }
 
-@media (max-width: 900px){
-  .speaking-layout{
-    grid-template-columns: 1fr; /* stack on mobile */
-  }
-  .speaking-media{
-    justify-self: start;
-    margin-top: 2rem;
-  }
+.speaking-item {
+  margin-bottom: 2rem;
+}
 
+.speaking-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.45rem;
+  color: var(--text);
+}
+
+.speaking-title span {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.speaking-description {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 40rem;
+}
 
 .speaking-media {
   justify-self: end;
 }
 
-.speaking-list p {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
-}
-
-.speaking-list span {
-  color: var(--accent);
-  font-weight: 500;
-}
-
-.speaking-item {
-  margin-bottom: 1.75rem;
-}
-
-.speaking-title {
-  font-size: 1.05rem;
-  margin-bottom: 0.4rem;
-}
-
-.speaking-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-  max-width: 36rem;
-}
-
-/* -----------------------
+/* =======================
    About
------------------------ */
+======================= */
 
 .about {
-  background: var(--bg-section);
+  background: var(--surface);
 }
 
-.about p {
-  max-width: 720px;
+.about-text {
   margin-top: 1.5rem;
-  line-height: 1.8;
+  max-width: 46rem;
+  font-size: 1.03rem;
+  line-height: 1.85;
 }
 
-/* -----------------------
+/* =======================
    Contact
------------------------ */
+======================= */
 
-.contact p {
-  font-size: 1rem;
-}
+.contact-line { margin-top: 1rem; }
 
 .contact a {
   text-decoration: underline;
@@ -266,73 +247,71 @@ header {
   text-underline-offset: 3px;
 }
 
-/* -----------------------
+/* =======================
    Images
------------------------ */
+======================= */
 
 .photo-frame {
-  display: inline-block; /* prevents stretching */
-  border: 1px solid var(--border-light);
-  padding: 0.4rem;
-  background: var(--bg-section);
+  display: inline-block;
+  border: 1px solid var(--border);
+  padding: 0.45rem;
+  background: var(--surface);
   border-radius: 18px;
 }
 
 .hero-photo {
-  width: 100%;
-  max-width: 240px;
+  display: block;
+  width: 240px;       /* portrait size */
+  max-width: 100%;
   height: auto;
   border-radius: 14px;
-  display: block;
   object-fit: cover;
 }
 
 .speaking-photo {
-  width: 100%;
-  max-width: 340px;
+  display: block;
+  width: 340px;       /* speaking image size */
+  max-width: 100%;
   height: auto;
   border-radius: 16px;
-  display: block;
   object-fit: cover;
 }
 
-/* -----------------------
+/* =======================
    Footer
------------------------ */
+======================= */
 
 footer {
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border);
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--muted);
 }
 
-/* -----------------------
+/* =======================
    Responsive
------------------------ */
+======================= */
 
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2.25rem;
   }
-
-  .hero-media {
-    justify-self: start;
-  }
+  .hero-media { justify-self: start; }
 
   .speaking-layout {
     grid-template-columns: 1fr;
   }
-
   .speaking-media {
     justify-self: start;
     margin-top: 2rem;
   }
+
+  section { padding: 4.5rem 1.25rem; }
 }
 
-@media (max-width: 768px) {
-  .hero-photo { max-width: 200px; }
-  .speaking-photo { max-width: 280px; }
+@media (max-width: 520px) {
+  .hero-photo { width: 200px; }
+  .speaking-photo { width: 280px; }
 }
