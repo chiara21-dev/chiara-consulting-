@@ -156,6 +156,60 @@ header {
   margin-bottom: 2.5rem;
   max-width: 42rem;
 }
+/* =======================
+   Why – softer editorial feel
+======================= */
+
+.why-text h2 {
+  margin-bottom: 1.5rem;
+}
+
+.why-block {
+  margin-top: 2.5rem;
+}
+
+.why-block h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+
+/* subtle divider under headings */
+.why-block h3::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+  margin-top: 0.5rem;
+}
+
+.why-block p {
+  margin-top: 0.8rem;
+  max-width: 46rem;
+  color: var(--muted);
+}
+
+/* list styling */
+.why-list {
+  margin: 1.4rem 0 1.6rem 0;
+  padding-left: 1.2rem;
+}
+
+.why-list li {
+  margin: 0.55rem 0;
+  color: var(--muted);
+}
+
+/* closing paragraph gets a little emphasis */
+.why-closer {
+  margin-top: 1.2rem;
+  font-size: 1.05rem;
+  color: var(--text);
+}
 
 /* =======================
    Pillars
